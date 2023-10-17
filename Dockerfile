@@ -1,8 +1,10 @@
 FROM alpine:latest as builder
 WORKDIR /app
 COPY . ./
-# This is where one could build the application code as well.
 
+# This is where one could build the application code as well.
+# https://github.com/digitalocean/sample-dockerfile/blob/main/Dockerfile
+RUN go build -mod=vendor -o bin/hello
 
 # https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds
 FROM alpine:latest
