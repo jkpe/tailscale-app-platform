@@ -1,9 +1,6 @@
-FROM alpine:latest as builder
+FROM golang:1.12-alpine as builder
 WORKDIR /app
 COPY . ./
-
-# This is where one could build the application code as well.
-# https://github.com/digitalocean/sample-dockerfile/blob/main/Dockerfile
 RUN go build -mod=vendor -o bin/hello
 
 # https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds
