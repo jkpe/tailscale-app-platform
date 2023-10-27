@@ -14,3 +14,5 @@ pong from do-app-platform-1 (100.118.95.97) via DERP(waw) in 53ms
 ```
 
 derp is waw? Why not london? VM and App is in London
+
+<img src="./assets/image.png" alt="Architecture diagram" width="800">
